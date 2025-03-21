@@ -45,7 +45,15 @@ npx husky add .husky/pre-commit "yarn lint-staged"
 ```
 
 3. **Others dependencies** (остальные зависимости)
-
-* ```yarn add react-router-dom```
-* ```yarn add @reduxjs/toolkit react-redux```
-* ```yarn add @types/react-redux```
+```sh
+yarn add react-router-dom
+```
+```sh
+yarn add @reduxjs/toolkit react-redux
+```
+```sh
+yarn add @types/react-redux axios classnames
+```
+```sh
+yarn add -D eslint prettier eslint-config-prettier eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks @typescript-eslint/parser @typescript-eslint/eslint-plugin husky lint-staged
+```
