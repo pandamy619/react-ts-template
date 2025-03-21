@@ -52,8 +52,8 @@ yarn add react-router-dom
 yarn add @reduxjs/toolkit react-redux
 ```
 ```sh
-yarn add @types/react-redux axios classnames
+yarn add @types/react-redux
 ```
 ```sh
-yarn add -D eslint prettier eslint-config-prettier eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks @typescript-eslint/parser @typescript-eslint/eslint-plugin husky lint-staged
+yarn add axios classnames eslint prettier husky lint-staged dotenv
 ```

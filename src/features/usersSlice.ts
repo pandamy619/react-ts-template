@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction, createAsyncThunk } from "@reduxjs/toolkit";
+import { config } from "../shared/config";
 import { User } from "../entities/User";
 
 interface UsersState {
@@ -14,10 +15,11 @@ const initialState: UsersState = {
 };
 
 export const fetchUsers = createAsyncThunk<User[]>("users/fetchUsers", async () => {
-  const response = await fetch("https://jsonplaceholder.typicode.com/users");
+  const response = await fetch(`${config.apiUrl}/users`);
   return response.json();
 });
 
+ 
 const usersSlice = createSlice({
   name: "users",
   initialState,
