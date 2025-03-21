@@ -1,46 +1,50 @@
-# Getting Started with Create React App
+# Clean Architecture React + TypeScript Template
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## 📌 Инициализация проекта
+```sh
+npx create-react-app my-app --template typescript
+cd my-app
+yarn add react-router-dom tailwindcss
+yarn tailwindcss init -p
+```
 
-In the project directory, you can run:
 
-### `npm start`
+## 📂 Архитектура проекта
+```
+/src
+  /app           # Настройка приложения (роутинг, глобальные провайдеры)
+  /entities      # Бизнес-сущности (интерфейсы, модели)
+  /features      # Логика функций (useCases)
+  /shared        # Общие утилиты, компоненты, API-клиенты
+  /widgets       # Комплексные компоненты (например, таблицы, карточки)
+  /pages         # Страницы приложения (сборка из widgets, features)
+  /processes     # Бизнес-процессы (авторизация, корзина и т. д.)
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 🚀 Описание
+Этот шаблон реализует **чистую архитектуру** для React + TypeScript, разделяя код на логические модули, что делает его масштабируемым и удобным для поддержки.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠 Настройка окружения разработки
 
-### `npm run build`
+1. **ESLint и Prettier** (линтинг и форматирование кода)
+```sh
+yarn add -D eslint prettier eslint-config-prettier eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks @typescript-eslint/parser @typescript-eslint/eslint-plugin
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Husky и lint-staged** (автоматический линтинг перед коммитом)
+```sh
+yarn add -D husky lint-staged
+yarn husky install
+npx husky add .husky/pre-commit "yarn lint-staged"
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Others dependencies** (остальные зависимости)
+```sh
+yarn add react-router-dom
+```
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
