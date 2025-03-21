@@ -1,7 +1,7 @@
 # Clean Architecture React + TypeScript Template
 
-
 ## 📌 Инициализация проекта
+
 ```sh
 npx create-react-app my-app --template typescript
 cd my-app
@@ -9,8 +9,8 @@ yarn add react-router-dom tailwindcss
 yarn tailwindcss init -p
 ```
 
-
 ## 📂 Архитектура проекта
+
 ```
 /src
   /app           # Настройка приложения (роутинг, глобальные провайдеры)
@@ -23,28 +23,29 @@ yarn tailwindcss init -p
 ```
 
 ## 🚀 Описание
+
 Этот шаблон реализует **чистую архитектуру** для React + TypeScript, разделяя код на логические модули, что делает его масштабируемым и удобным для поддержки.
 
 ---
 
-
 ## 🛠 Настройка окружения разработки
 
 1. **ESLint и Prettier** (линтинг и форматирование кода)
+
 ```sh
 yarn add -D eslint prettier eslint-config-prettier eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks @typescript-eslint/parser @typescript-eslint/eslint-plugin
 ```
 
 2. **Husky и lint-staged** (автоматический линтинг перед коммитом)
+
 ```sh
 yarn add -D husky lint-staged
 yarn husky install
 npx husky add .husky/pre-commit "yarn lint-staged"
 ```
 
-
 3. **Others dependencies** (остальные зависимости)
-```sh
-yarn add react-router-dom
-```
 
+* ```yarn add react-router-dom```
+* ```yarn add @reduxjs/toolkit react-redux```
+* ```yarn add @types/react-redux```

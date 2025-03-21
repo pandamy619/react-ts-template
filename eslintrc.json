@@ -1,6 +1,8 @@
 {
-    "extends": ["react-app", "plugin:@typescript-eslint/recommended", "prettier"],
-    "rules": {
-      "prettier/prettier": "error"
-    }
+  "extends": ["plugin:@typescript-eslint/recommended", "prettier"],
+  "plugins": ["@typescript-eslint", "prettier"],
+  "rules": {
+    "prettier/prettier": "error",
+    "react/react-in-jsx-scope": "off"
   }
+}
