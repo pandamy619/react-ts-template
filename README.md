@@ -57,3 +57,11 @@ yarn add @types/react-redux
 ```sh
 yarn add axios classnames eslint prettier husky lint-staged dotenv
 ```
+
+
+🚀 Как запустить?
+
+```sh
+chmod +x setup.sh
+./setup.sh
+```
